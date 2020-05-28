@@ -1,78 +1,16 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<p align="center"><img src="http://ord4af.org/assets/img/ordlogo.png" width="400"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+ 
 
-## About Laravel
+## About ORD
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ <p>
+ 	Organization for Relief Development – (ORD) is a non-governmental organization established in January 2010. ORD has developed and implemented humanitarian and development projects over the past years, the diversified range of projects includes DHs (district hospitals), CHC’s (comprehensive health center), BHC’s (basic health centers), football and cricket stadiums, burn and trauma centers, schools, water intakes, nursery farms, conducted trainings in different fields, cash/food for work projects and livelihood projects for IDPs and Returnees, our annual budget might reach @ USD 2,532,880.00.<br>
+ 	We believe our projects are the best examples of our abilities and professionalism as well as we take gender equality into consideration if applicable. ORD’s mission is to work with communities in collaboration with social society in order to implement multi –sectorial rehabilitation and development projects that foster self-reliance, self-sufficiency and relate the socio- economic conditions that promote peace and empower the people of Afghanistan. Working in some of Afghanistan’s most challenging environments, ORD’s vision is to empower vulnerable and forgotten communities, economic self-reliance and reduction of social vulnerabilities within communities.
+ 	ORD setup a pool of 200 qualified and professional male (150) and female (50) staff to sustain ORD’s programs at community level. ORD has implemented several large and medium size scale projects with highly productive results in Southeast Region (Paktia, Khost and Paktika provinces), Northwest Region (Balkh, Jawzjan, samangan, faryab and Saripul provinces), Northeast (Badakhshan, Takhar, Kunduz and Baghlan Provinces) and East Region (Nangarhar & Kunar Provinces).<br>
+ 	ORD is registered with the ministry of economy of Afghanistan under NGO’s law with registration No-1697 and have the right (NOC) to operate all over Afghanistan. We also have the membership of Agency Coordination Body for Afghanistan Relief (ACBAR). Organization for Relief Development (ORD) has implemented around 79 projects in development and humanitarian sectors in central, eastern, northern, northeastern regions and southeast regions with PATRIP Foundation, UNHCR, WFP, GIZ, German Embassy, IOM, UNAMA, UNOPS, DPA, Care international, and ADT. 90 % of the projects implemented by ORD focalized on IDPs, refugees and returnees. The project delivered services in protection, livelihoods, social cohesion, reintegration and community mobilization and advocacy. ORD has available loop of professional staff for livelihoods, protection, advocacy and social mobilization in central, northern, northeastern, eastern, and southeastern provinces and utilize their services to effectively implement ongoing projects.<br>
+ 	Organization for Relief Development (ORD) is strategically working in Emergency Relief and Response, Community Rehabilitation and Infrastructure, Health Infrastructure and doctor refreshment trainings, sports Infrastructure and tournaments, Education and Education Infrastructure, Water Quality, Sanitation and Hygiene, Food Security and Agriculture, with cross cutting focus on Youth and women empowerment.<br>
+ 	ORD has technical expertise both in soft and hard components and implemented more than 14 projects relevant to the EZ-Kar Project of World Bank. Additionally, ORD has the privilege of implementation of CPM (community protection measures), PSN (Person’s Specific Needs) and warehouse management program under UNHCR in nine provinces of North and Northeast of Afghanistan in 2018 as well as ORD has the privilege to implement the same program for the year 2019. In Addition ORD has implemented Asset Creation and Seasonal Support and warehouse management programs under WFP (World Food Program) in Paktika province in 2018 and has the opportunity to implement the same program under WFP for the year 2019<br>
+ 	 	Furthermore, ORD is partner with PATRIP foundation (Pakistan, Afghanistan, Tajikistan Reintegration Program) for the past 7 years, The PATRIP Foundation has been established by German state-owned KfW Development Bank on behalf of the German Federal Foreign Office, and ORD has the privilege to Implement several infrastructure projects under PATRIP foundation including district level hospitals, CHC. BHC, mother and child centers, cricket stadiums, schools, water intakes and agricultural extension units in east and southeast of Afghanistan. In addition to that, ORD has conducted several capacity building trainings of Doctors, Nurses, Teachers and Agricultural officers to boost the impact and sustainability of the projects implemented by ORD. Additionally ORD has implemented “Drought Response” program under DPA (Danish People’s Aid) in Faryab province in 2018. Recently the Organization for Relief Development (ORD) has successfully passed the capacity assessment of UNOCHA, and was awarded with a certificate of partnership with UNOCHA and has the previlige to implement UNOCHA’s AHF projects.<br>
+ 	ORD has also trained professional staff in many sectors and working hard to hire the most well educated, professional, young and committed staff since its establishment. The staff trained on different new approaches to understand and support the displaced/returnees’ families, refugees, nomads and host communities considering the prior needs of the beneficiaries, the staff has been trained how to work and collaborate with communities and community elders to implement the project in the most effective, efficient and sustainable way. ORD has worked in Central, South, Southeast, North and Northeast regions, 60 % of staff are locals from the region, who understands the displacement trends, local culture, cultural sensitivities and government policies, and well aware of the different humanitarian agencies working in the target provinces. Furthermore, ORD has the extraordinary experience in logistics in all the projects and established warehouses for all the implemented offices. ORD has been awarded by UNHCR Geneva with certificate for the effective Procurement Management for displaced/returned communities.
+ </p>

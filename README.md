@@ -1,4 +1,4 @@
-<p align="center"><img src="http://ord4af.org/assets/img/ordlogo.png" width="400"></p>
+<p align="center"><img src="http://ord4af.org/assets/img/ordlogo.png" width="250"></p>
 
  
 

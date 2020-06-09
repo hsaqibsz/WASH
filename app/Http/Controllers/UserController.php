@@ -154,10 +154,21 @@ class UserController extends Controller
 
   public function dashboard()
   {
-    $users = User::all();
+    $users = User::paginate(9);
+
+  
     return view('hr.dashboard', compact('users'));
   }
 
+  public function sort($a)
+  {
+
+    $users = User::where('name', 'LIKE', '%'. $a )->paginate(9);
+
+     
+ 
+    return view('hr.dashboard', compact('users'));
+  }
 
 
 

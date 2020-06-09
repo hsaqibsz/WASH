@@ -6,10 +6,10 @@
 <div class="row text-center">
                             <div class="col-sm-6 col-lg-3">
                                 <a href="{{route('project.create')}}" class="widget widget-hover-effect2">
-                                    <div class="widget-extra themed-background-success">
+                                    <div class="widget-extra themed-background-info">
                                         <h4 class="widget-content-light"><strong>Add New</strong> Project</h4>
                                     </div>
-                                    <div class="widget-extra-full"><span class="h2 text-success animation-expandOpen"><i class="fa fa-plus"></i></span></div>
+                                    <div class="widget-extra-full"><span class="h2 text-info animation-expandOpen"><i class="fa fa-plus"></i></span></div>
                                 </a>
                             </div>
 
@@ -34,10 +34,10 @@
 
                       <div class="col-sm-6 col-lg-3">
                           <a href="{{ route('project.export',['type'=>'xlsx']) }}" class="widget widget-hover-effect2">
-                              <div class="widget-extra themed-background-info">
+                              <div class="widget-extra themed-background-success">
                                   <h4 class="widget-content-light"><strong>Export</strong> Report</h4>
                               </div>
-                              <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen"><i class="fa fa-file"></i></span></div>
+                              <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen"><i class="fa fa-file-excel-o " style="color: green;"></i></span></div>
                           </a>
                       </div>
 
@@ -51,7 +51,7 @@
                              <div class="block-title">
                                  <h2><strong>Water></strong> Projects</h2>
                              </div>
-                             <p><a href="https://datatables.net/" target="_blank">DataTables</a> is a plug-in for the Jquery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table. It is integrated with template's design and it offers many features such as on-the-fly filtering and variable length pagination.</p>
+                             <p> </p>
 
                              <div class="table-responsive">
                                  <div id="example-datatable_wrapper" class="dataTables_wrapper form-inline no-footer">
@@ -70,6 +70,8 @@
                                          	<th class="sorting" tabindex="0" aria-controls="example-datatable" rowspan="1" colspan="1" aria-label="Subscription: activate to sort column ascending" style="width: 251px;">Progressed %</th>
 
                                          	<th class="sorting" tabindex="0" aria-controls="example-datatable" rowspan="1" colspan="1" aria-label="Subscription: activate to sort column ascending" style="width: 251px;">Status</th>
+
+                                           <th class="sorting" tabindex="0" aria-controls="example-datatable" rowspan="1" colspan="1" aria-label="Subscription: activate to sort column ascending" style="width: 251px;">Approval Status</th>
 
                                          	<th class="text-center sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 163px;">Actions</th></tr>
 
@@ -98,18 +100,42 @@
 
                                               	</td>
 
+                                                <td>
+                                                  @if($project->approved_by == -1)
+                                                   <span class="label label-info">Saved/Drafted</span>
+                                                   @elseif($project->approved_by == 0)
+                                                   <span class="label label-warning">Under Review</span>
+                                                  @else
+                                                  <span class="label label-success">Approved</span>
+                                                  @endif
+                                                </td>
+
                                               	<td class="text-center">
                                               		<div class="btn-group">
+                                          @if($project->approved_by == -1)
+	                                               <a href="{{route('project.request.approval', $project->id)}}" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Send to project manager for approval"><i class="fa fa-send"></i></a>
 
-	                                                    <a href="#" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Send to project manager for approval"><i class="fa fa-send"></i></a>
+                                                 <a href="{{route('project.show', $project->id)}}" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Show"><i class="fa fa-eye"></i></a>
 
-	                                                    <a href="{{route('project.show', $project->id)}}" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Show"><i class="fa fa-eye"></i></a>
-
-	                                                    <a href="{{route('project.edit', $project->id)}}" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                                 <a href="{{route('project.edit', $project->id)}}" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
 
 
-	                                                    <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a> 
+                                                 <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a> 
+                                           @elseif($project->approved_by == 0)   
 
+	                                                    
+
+                                                      <a href="{{route('project.show', $project->id)}}" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Show"><i class="fa fa-eye"></i></a>
+
+                                                      <a href="{{route('project.edit', $project->id)}}" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Request Edit"><i class="fa fa-pencil danger"></i></a> 
+	                                                     
+                                                  @else
+                      
+
+                                                        <a href="{{route('project.show', $project->id)}}" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="View Details"><i class="fa fa-eye fa-2x"></i></a>
+
+                                                     
+                                                  @endif
 	                                                </div>
                                               	</td>
                                               </tr>

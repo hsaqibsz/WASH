@@ -26,6 +26,8 @@ class CreateProjectsTable extends Migration
             $table->integer('number_planned_visits'); // we added extra, to show the planed site visits for the project.
             $table->integer('number_documented_visits'); // we added extra, to show how many site visits have been documented so far.
 
+            $table->integer('user_id');
+
 
             //project dates
             $table->date('planned_start_date');
@@ -60,6 +62,11 @@ class CreateProjectsTable extends Migration
             $table->string('OM')->default('committee established'); // to report if any committee for operation and maintainance has been established.
             $table->string('OM_trained')->default('committee recieved training');
             $table->text('remarks')->nullable(); // to report any critical point if available during site visit.
+
+            //extra management development tricks related fields 
+
+            $table->integer('submitted_by');
+            $table->integer('approved_by')->default(0);
 
             $table->timestamps();
         });

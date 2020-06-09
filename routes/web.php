@@ -19,6 +19,14 @@ Route::get('/home', 'HomeController@index');
 
 Auth::routes();
 
+route::get('project/discussion/create/{project_id}', 'DiscussionController@create')->name('discussion.create');
+route::get('project/files/discussion/view/{file_id}', 'DiscussionController@view')->name('discussion.view');
+
+route::post('project/files/store/{project_id}', 'FileController@store')->name('file.store');
+route::get('/project/files/{id}/{class}', 'ProjectController@files')->name('project.files');
+
+route::get('/project/files/{id}', 'FileController@edit')->name('file.edit');
+route::PUT('/project/files/update/{id}', 'FileController@update')->name('file.update');
 
 route::get('/projects', 'ProjectController@index')->name('project.index');
 route::get('/projects/create', 'ProjectController@create')->name('project.create');
@@ -27,6 +35,9 @@ route::get('/project/details/{id}', 'ProjectController@show')->name('project.sho
 route::get('/project/edit/{id}', 'ProjectController@edit')->name('project.edit');
 route::PUT('/project/update/{id}', 'ProjectController@update')->name('project.update');
 route::get('/project/export/{type}', 'ProjectController@export')->name('project.export');
+route::get('/project/Request/Approval/{id}', 'ProjectController@RequestApproval')->name('project.request.approval');
+
+
 
 
 
@@ -46,6 +57,7 @@ route::get('/register/profile/step8/{id?}', 'UserController@completeProfile8')->
 
 route::get('/hr/dashboard', 'UserController@dashboard')->name('hr.dashboard');
 route::get('/hr/user/profile/{id}', 'UserController@profile')->name('user.profile');
+route::get('/hr/user/sort/{a}', 'UserController@sort')->name('user.sort');
 
 route::group(['middleware' => 'admin'], function(){
 Route::get('/users', 'HomeController@getUsers')->name('getUsers');
@@ -57,15 +69,9 @@ Route::Delete('/users/userDelete/{id}', 'HomeController@userDelete')->name('user
 Route::get('/users/addUser', 'HomeController@addUser')->name('addUser');
 Route::post('/users/storeUser', 'HomeController@storeUser')->name('storeUser');
 
-Route::post('/inventory/import', 'InventoryController@import')->name('inv.import');
-//Route::get('/inventory/export', 'InventoryController@export')->name('inv.export');
-Route::get('inventoryexport/{type}', array('as'=>'inv.export','uses'=>'InventoryController@export'));
-Route::post('/inventory/search', 'InventoryController@search')->name('inv.search');
-Route::post('/inventory/report', 'InventoryController@report')->name('inv.report');
-
-Route::Resource('/inventory', 'InventoryController');
+ 
 
 Route::Resource('/donor', 'DonorController');
-Route::Resource('/supplier', 'SupplierController');
+ 
  
  });

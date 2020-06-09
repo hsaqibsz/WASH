@@ -14,11 +14,11 @@
                             </div>
 
                             <div class="col-sm-6 col-lg-3">
-                                <a href="javascript:void(0)" class="widget widget-hover-effect2">
-                                    <div class="widget-extra themed-background-danger">
-                                        <h4 class="widget-content-light"><strong>Relevant photographs</strong> </h4>
+                                <a href="{{route('project.files', ['project_id' => $project->id, 'class_type'=>'Photo'])}}" class="widget widget-hover-effect2">
+                                    <div class="widget-extra themed-background-info">
+                                        <h4 class="widget-content-light"><strong>Relevant Discussions</strong> </h4>
                                     </div>
-                                    <div class="widget-extra-full"><span class="h2 text-danger animation-expandOpen"><i class="gi gi-picture"></i></span></div>
+                                    <div class="widget-extra-full"><span class="h2 text-info animation-expandOpen"><i class="fa fa-comments"></i></span></div>
                                 </a>
                             </div>
 
@@ -32,13 +32,15 @@
                             </div>  
 
                                <div class="col-sm-6 col-lg-3">
-                                <a href="javascript:void(0)" class="widget widget-hover-effect2">
+                                <a href="{{route('project.files', ['project_id' => $project->id, 'class_type'=>'Report'])}}" class="widget widget-hover-effect2">
                                     <div class="widget-extra themed-background-dark">
-                                        <h4 class="widget-content-light"><strong>Relevant Documents/Reports</strong></h4>
+                                        <h4 class="widget-content-light"><strong>Relevant Documents/Photos</strong></h4>
                                     </div>
                                     <div class="widget-extra-full"><span class="h2 themed-color-dark animation-expandOpen"><i class="gi gi-folder_open"></i></span></div>
                                 </a>
-                            </div>
+                            </div>   
+
+
 
                              
                         </div>

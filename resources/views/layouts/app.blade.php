@@ -239,7 +239,7 @@
                                 </div>
                                 <div class="alert alert-success alert-alt">
                                     <small>3 hours ago</small><br>
-                                    <i class="fa fa-plus fa-fw"></i> <a href="page_ready_user_profile.html"><strong>John Doe</strong></a> would like to become friends!<br>
+                                    <i class="fa fa-plus fa-fw"></i> <a href="{{route('user.profile', Auth::user()->id)}}"><strong>John Doe</strong></a> would like to become friends!<br>
                                     <a href="javascript:void(0)" class="btn btn-xs btn-primary"><i class="fa fa-check"></i> Accept</a>
                                     <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-times"></i> Ignore</a>
                                 </div>
@@ -300,7 +300,7 @@
                             <!-- User Info -->
                             <div class="sidebar-section sidebar-user clearfix sidebar-nav-mini-hide">
                                 <div class="sidebar-user-avatar">
-                                    <a href="page_ready_user_profile.html">
+                                    <a href="{{route('user.profile', Auth::user()->id)}}">
                                         <img src="{{Auth::user()->profile->avatar}}" alt="avatar">
                                     </a>
                                 </div>
@@ -349,22 +349,10 @@
                                     <a href="page_widgets_media.html"><i class="gi gi-film sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Media</span></a>
                                 </li>
 
-
-                                <li class="sidebar-header">
-                                    <span class="sidebar-header-options clearfix"><a href="javascript:void(0)" data-toggle="tooltip" title="Quick Settings"><i class="fa fa-truck"></i></a><a href="javascript:void(0)" data-toggle="tooltip" title="Manage Inventory!"><i class="gi gi-lightbulb"></i></a></span>
-                                    <span class="sidebar-header-title">Inventory Kit</span>
-                                </li>
-
-                                <li>
-                                    <a href="#"><i class="gi gi-list sidebar-nav-icon"></i> <span class="sidebar-nav-mini-hide">Inventory List</span></a>
-                                </li>
-                                
-                                <li>
-                                    <a href="page_widgets_media.html"><i class="gi gi-plus sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Register Inventory Items</span></a>
-                                </li> 
+  
 
                            <li class="sidebar-header">
-                                    <span class="sidebar-header-options clearfix"><a href="javascript:void(0)" data-toggle="tooltip" title="Quick Settings"><i class="fa fa-truck"></i></a><a href="javascript:void(0)" data-toggle="tooltip" title="Manage Inventory!"><i class="gi gi-lightbulb"></i></a></span>
+                                    <span class="sidebar-header-options clearfix"><a href="javascript:void(0)" data-toggle="tooltip" title="Quick Settings"></a><a href="javascript:void(0)" data-toggle="tooltip" title="Manage Inventory!"><i class="gi gi-lightbulb"></i></a></span>
                                     <span class="sidebar-header-title">CFM </span>
                                 </li>
 
@@ -383,22 +371,7 @@
                               
                                 
                                  
-                                
-                                <li>
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="gi gi-show_big_thumbnails sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">CFM</span></a>
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="hi hi-warning-sign sidebar-nav-icon"></i> <span class="sidebar-nav-mini-hide">New Complaints  <span class="label label-danger label-indicator animation-floating">4</span></span></a>
-                                        </li>
-                                        <li>
-                                             
-                                        </li>
-                                        <li>
-                                          <a href="#"><i class="gi gi-ok sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Closed/Responded Cases</span></a>
-                                        </li>
-                                         
-                                    </ul>
-                                </li>
+                          
                                 
                                 
                             </ul>
@@ -532,7 +505,7 @@
                                     </li>
                                     <li class="divider"></li>
                                     <li>
-                                        <a href="page_ready_user_profile.html">
+                                        <a href="{{route('user.profile', Auth::user()->id)}}">
                                             <i class="fa fa-user fa-fw pull-right"></i>
                                             Profile
                                         </a>
@@ -636,10 +609,14 @@
                     <!-- Footer -->
                     <footer class="clearfix">
                         <div class="pull-right">
-                            Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>
+                            Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://ord.org.af" target="_blank">ORD</a> & <a href="https://unicef.org/Afghanistan" target="_blank">UNICEF AF</a>
                         </div>
-                        <div class="pull-left">
-                            <span > 2010 - <?PHP echo date('Y'); ?></span> &copy; <a href="http://ord.org.af" target="_blank">Organization for Relief Development (ORD)5</a>
+                        
+                       
+
+                         <div class="pull-left">
+                            <span > 2010 - <?PHP echo date('Y'); ?></span> &copy; <a href="http://ord.org.af" target="_blank">Organization for Relief Development (ORD)</a>
+                           &nbsp; &nbsp; <span > Powered by</span> <a href="https://www.linkedin.com/in/hikmatullah-saqib-a53230122" target="_blank">SAQIB</a>
                         </div>
                     </footer>
                     <!-- END Footer -->

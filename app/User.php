@@ -52,6 +52,11 @@ class User extends Authenticatable
     public function experience()
     {
         return $this->hasMany('App\Experience');
+    }  
+
+    public function projects()
+    {
+        return $this->hasMany('App\Project');
     }
 
 

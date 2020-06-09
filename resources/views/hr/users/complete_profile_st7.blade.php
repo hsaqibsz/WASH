@@ -10,7 +10,7 @@
      <div class="content-header content-header-media">
          <div class="header-section">
              <img src="{{$user->profile->avatar}}" alt="Avatar" class="pull-right img-circle" width="90px">&nbsp; <a href="{{route('user.edit.profile', $user->id)}}"><i class="hi hi-pencil"></i></a>
-             <h1>{{$user->name}} {{$user->lastname}} <br><small>{{$user->profile->position}} @ {{$user->profile->province}} Province</small></h1>
+             <h1> {{$user->name}} {{$user->lastname}} <br><small>We found this user is {{$user->profile->position}} @ {{$user->profile->province}} Province </small></h1>
          </div>
          <!-- For best results use an image with a resolution of 2560x248 pixels (You can also use a blurred image with ratio 10:1 - eg: 1000x100 pixels - it will adjust and look great!) -->
          <img src="{{ asset('assets/admin/img/placeholders/headers/profile_header.jpg') }}" alt="header image" class="animation-pulseSlow">
@@ -27,8 +27,8 @@
                  <!-- Info Title -->
                  <div class="block-title">
                      <div class="block-options pull-right">
-                         <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Friend Request"><i class="fa fa-plus"></i></a>
-                         <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Hire"><i class="fa fa-briefcase"></i></a>
+                       <!--   <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Friend Request"><i class="fa fa-plus"></i></a>
+                         <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Hire"><i class="fa fa-briefcase"></i></a> -->
                      </div>
                      <h2>About <strong>{{$user->name}} <span style="text-transform: uppercase;">{{$user->lastname}}</span></strong> <small>&bull; <i class="fa fa-file-text text-primary"></i> <a href="javascript:void(0)" data-toggle="tooltip" title="Download Bio in PDF">Bio</a></small></h2>
                  </div>
@@ -134,79 +134,90 @@
          </div>
          <!-- END Second Column -->
          <!-- First Column -->
-       <div class="col-lg-6">
+       <div class="col-lg-7">
                                 <!-- Orders Block -->
                                 <div class="block">
                                     <!-- Orders Title -->
                                     <div class="block-title">
                                         <div class="block-options pull-right">
-                                            <span class="label label-success"><strong>$ 2125,00</strong></span>
+                                            <span class="label label-success"><strong>Count Projects ({{$user->projects->count()}})</strong></span>
                                         </div>
-                                        <h2><i class="fa fa-truck"></i> <strong>Orders</strong> (4)</h2>
+                                        <h2><i class="gi gi-briefcase"></i> <strong>Projects</strong> </h2>
                                     </div>
                                     <!-- END Orders Title -->
 
                                     <!-- Orders Content -->
-                                    <table class="table table-bordered table-striped table-vcenter">
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-center" style="width: 100px;"><a href="page_ecom_order_view.html"><strong>ORD.685199</strong></a></td>
-                                                <td class="hidden-xs" style="width: 15%;"><a href="javascript:void(0)">5 Products</a></td>
-                                                <td class="text-right hidden-xs" style="width: 10%;"><strong>$585,00</strong></td>
-                                                <td><span class="label label-warning">Processing</span></td>
-                                                <td class="hidden-xs">Paypal</td>
-                                                <td class="hidden-xs text-center">16/11/2014</td>
-                                                <td class="text-center" style="width: 70px;">
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
-                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center"><a href="page_ecom_order_view.html"><strong>ORD.685198</strong></a></td>
-                                                <td class="hidden-xs"><a href="javascript:void(0)">2 Products</a></td>
-                                                <td class="text-right hidden-xs"><strong>$958,00</strong></td>
-                                                <td><span class="label label-info">For delivery</span></td>
-                                                <td class="hidden-xs">Credit Card</td>
-                                                <td class="hidden-xs text-center">03/10/2014</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
-                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center"><a href="page_ecom_order_view.html"><strong>ORD.685197</strong></a></td>
-                                                <td class="hidden-xs"><a href="javascript:void(0)">3 Products</a></td>
-                                                <td class="text-right hidden-xs"><strong>$318,00</strong></td>
-                                                <td><span class="label label-success">Delivered</span></td>
-                                                <td class="hidden-xs">Bank Wire</td>
-                                                <td class="hidden-xs text-center">17/06/2014</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
-                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center"><a href="page_ecom_order_view.html"><strong>ORD.685196</strong></a></td>
-                                                <td class="hidden-xs"><a href="javascript:void(0)">6 Products</a></td>
-                                                <td class="text-right hidden-xs"><strong>$264,00</strong></td>
-                                                <td><span class="label label-success">Delivered</span></td>
-                                                <td class="hidden-xs">Paypal</td>
-                                                <td class="hidden-xs text-center">27/01/2014</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group btn-group-xs">
-                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
-                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                                 <div class="table-responsive">
+                                                                     <div id="example-datatable_wrapper" class="dataTables_wrapper form-inline no-footer">
+
+                                                                         <table id="example-datatable" class="table table-vcenter table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="example-datatable_info">
+                                                                         <thead>
+                                                                             <tr role="row">
+                                                                                
+                                                                                <th class="text-center sorting_asc" tabindex="0" aria-controls="example-datatable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column descending" style="width: 73px;">SR</th>
+
+
+                                                                                <th class="sorting" tabindex="0" aria-controls="example-datatable" rowspan="1" colspan="1" aria-label="Client: activate to sort column ascending" style="width: 136px;">Project Code</th>
+
+                                                                                <th class="sorting" tabindex="0" aria-controls="example-datatable" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 267px;">Project Name</th>
+
+                                                                                <th class="sorting" tabindex="0" aria-controls="example-datatable" rowspan="1" colspan="1" aria-label="Subscription: activate to sort column ascending" style="width: 251px;">Progressed %</th>
+
+                                                                                <th class="sorting" tabindex="0" aria-controls="example-datatable" rowspan="1" colspan="1" aria-label="Subscription: activate to sort column ascending" style="width: 251px;">Status</th>
+
+                                                                                <th class="text-center sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 163px;">Actions</th></tr>
+
+                                                                         </thead>
+                                                                         <tbody>
+                                                                             
+                                                                           @foreach($user->projects as $project)
+                                                                                  <tr>
+                                                                                    <td class="text-center">{{$loop->index+1}}</td>
+                                                                                    <td class="text-center">{{$project->project_id}}</td>
+                                                                                    <td class="text-center">{{$project->project_name}}</td>
+                                                                                    <td class="text-center"> 
+                                                                                <div class="progress">
+                                                                                                    <div  class="progress-bar progress-bar"  role="progressbar" style="width: {{$project->project_progressed}}%" aria-valuenow="{{$project->project_progressed}}" aria-valuemin="0" aria-valuemax="100">{{$project->project_progressed}}%</div>
+                                                                                                  </div>
+                                                                                    </td>
+                                                                                    <td class="text-center">
+                                                                                        @if($project->project_status =="Ongoing")
+                                                                                        <span class="label label-info">Ongoing</span>
+                                                                                         @elseif($project->project_status =="Planned")
+                                                                                        <span class="label label-warning">Planned</span>
+                                                                                         @elseif($project->project_status =="Completed/Handedover")
+                                                                                        <span class="label label-success">Completed/Handedover</span>
+                                                                                         @elseif($project->project_status =="Failed")
+                                                                                        <span class="label label-danger">Failed</span>
+
+                                                                                        @else
+                                                                                        <span class="label label-default">Note Reported</span>
+                                                                                        @endif
+
+                                                                                    </td>
+
+                                                                                    <td class="text-center">
+                                                                                        <div class="btn-group">
+
+                                                                                            <a href="#" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Send to project manager for approval"><i class="fa fa-send"></i></a>
+
+                                                                                            <a href="{{route('project.show', $project->id)}}" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Show"><i class="fa fa-eye"></i></a>
+
+                                                                                            <a href="{{route('project.edit', $project->id)}}" data-toggle="tooltip" title="" class="btn btn-xs btn-default" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+ 
+
+                                                                                        </div>
+                                                                                    </td>
+                                                                                  </tr>
+                                                                           @endforeach   
+
+                                                                         </tbody>
+                                                                     </table>
+
+                                                                    
+
+                                                                 </div>
+                                                                 </div>
                                     <!-- END Orders Content -->
                                 </div>
                                 <!-- END Orders Block -->
@@ -244,3 +255,9 @@
  <!-- END Page Content -->
 
 @endsection
+
+<script src="{{ asset('assets/admin/js/vendor/jquery.min.js') }}"></script>
+ 
+
+  <script src="{{ asset('assets/admin/js/pages/tablesDatatables.js') }}"></script>
+        <script>$(function(){ TablesDatatables.init(); });</script>

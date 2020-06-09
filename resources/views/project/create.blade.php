@@ -153,6 +153,18 @@
             <div class="form-group-revised">
             <label>ORD's Site Engineer/Monitor</label>
             <input type="text" name="ORD_site_engineer" class="form-control" placeholder="Name, C#: (078) 777 2013">
+            </div> 
+
+            <div class="form-group-revised">
+            <label>Find above site engineer of ORD in the list</label>
+
+            <select name="user_id" class="form-control">
+              @foreach($users as $user)
+                     <option value="{{$user->id}}">{{$user->name}}, C#: {{$user->profile->phone}}</option>
+              @endforeach
+              
+            </select>
+             
             </div>
 
 

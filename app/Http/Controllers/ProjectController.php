@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\File;
 use App\Project;
-use Illuminate\Http\Request;
-
-use Session;
-
+use App\User;
 use Excel;
+use Illuminate\Http\Request;
+use Session;
+use Auth;
 
 
 class ProjectController extends Controller
@@ -20,10 +21,24 @@ class ProjectController extends Controller
 
 
 
+
+public function files($id, $class_type)
+{
+
+  $files = File::where('project_id', $id)->get();
+  $project = Project::where('id', $id)->first();
+
+  return view('project.files.index', compact('files', 'project', 'class_type'));
+
+}
     public function export($type)
     {
-           $projects = Project::get()->toArray();
-      //  $inventory = Inventory::select('Item_name','Manufacturer','Serial_no', 'Model_no', 'Price')->get()->toArray();
+          // $projects = Project::get()->toArray(); // this query is to select all table
+       
+
+       $projects = Project::select('id' ,'project_id','project_name', 'project_type', 'project_type_WorS', 'project_type_PorH', 'project_type_WinSorWinHCF', 'project_status',
+        'project_progressed', 'number_planned_visits', 'number_documented_visits', 'planned_start_date', 'planned_completion_date', 'actual_start_date', 'actual_completion_date', 'relevant_NTA', 'MRRD_site_engineer', 'CDC_representative', 'ORD_site_engineer', 'zone', 'province', 'district', 'village', 'latitude', 'longitude', 'benefeciaries', 'water_quality_tested', 'OM', 'OM_trained', 'remarks')->get()->toArray(); // this query is to select specific tanle
+
         return \Excel::create('Project_Report('. Date('Y-m-d') .')', function($excel) use ($projects) {
             $excel->sheet('Projects_report', function($sheet) use ($projects)
             {
@@ -43,7 +58,7 @@ class ProjectController extends Controller
                 });
 
                 $sheet->row(1, array(
-                     'SNo', 'Project ID', 'Project Name', 'Project Type', 'Project Type (Water Supply or Sanitation)', 'Project Type (Public Tape or HHs Connected)', 'Project Type (WinS or WinHCF)', 'Project Status', 'Project Progressed %', 'Total Planned Visits', 'Total Documented Visits', 'Planned Start Date', 'Planned Completion Date', 'Actual Start Date', 'Actual Completion Date', 'Relevant NTA, C#', 'MRRD Site Engineer', 'CDC Representative', 'ORD Site Engineer', 'Region', 'Province', 'District', 'Village', 'Latitude', 'Longitude', 'Benefeciaries', 'Water Quality Tested? (Yes/No)', 'IP MRRD','IP PRRD', 'IP NGO', 'O&M', 'O&M Trained', 'Remarks', 'Created at', 'Updated at' 
+                     'SNo', 'Project ID', 'Project Name', 'Project Type', 'Project Type (Water Supply or Sanitation)', 'Project Type (Public Tape or HHs Connected)', 'Project Type (WinS or WinHCF)', 'Project Status', 'Project Progressed %', 'Total Planned Visits', 'Total Documented Visits', 'Planned Start Date', 'Planned Completion Date', 'Actual Start Date', 'Actual Completion Date', 'Relevant NTA, C#', 'MRRD Site Engineer', 'CDC Representative', 'ORD Site Engineer', 'Region', 'Province', 'District', 'Village', 'Latitude', 'Longitude', 'Benefeciaries', 'Water Quality Tested? (Yes/No)',  'O&M', 'O&M Trained', 'Remarks' 
                 ));
                 
             });
@@ -66,7 +81,9 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('project.create');
+        
+        $users = User::all();
+        return view('project.create', compact('users'));
     }
 
     /**
@@ -75,6 +92,17 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function RequestApproval($id)
+    {
+       $project = Project::where('id', $id)->first();
+       $project->approved_by = 0;
+       $project->submitted_by = Auth::user()->id;
+       $project->save();
+
+       Session::flash('success', 'Your request to get approval for '. $project->project_name .' Project, has been sent successfully');
+       return redirect()->back();
+    }
+
     public function store(Request $request)
     {
        
@@ -82,6 +110,7 @@ class ProjectController extends Controller
        $project = new Project;
 
        $project->project_id = $request->project_id;
+       $project->user_id = $request->user_id;
        $project->project_name = $request->project_name;
        $project->project_type = $request->project_type;
        $project->project_type_WorS = $request->project_type_WorS;
@@ -139,6 +168,9 @@ class ProjectController extends Controller
 
 
        $project->remarks = $request->remarks;
+
+       $project->submitted_by = Auth::user()->id;
+       $project->approved_by = -1;
 
        $project->save();
 
@@ -172,8 +204,9 @@ class ProjectController extends Controller
     public function edit($id)
     {
         $project = Project::where('id', $id)->first();
+        $users = User::all();
 
-        return view('project.edit', compact('project'));
+        return view('project.edit', compact('project', 'users'));
     }
 
     /**
@@ -189,6 +222,7 @@ class ProjectController extends Controller
        $project = Project::where('id', $id)->first();
 
        $project->project_id = $request->project_id;
+       $project->user_id = $request->user_id;
        $project->project_name = $request->project_name;
        $project->project_type = $request->project_type;
        $project->project_type_WorS = $request->project_type_WorS;
@@ -246,6 +280,8 @@ class ProjectController extends Controller
 
 
        $project->remarks = $request->remarks;
+       $project->submitted_by = Auth::user()->id;
+       $project->approved_by = -1;
 
        $project->save();
 

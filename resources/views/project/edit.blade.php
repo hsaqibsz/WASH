@@ -158,6 +158,21 @@
 
 
             <div class="form-group-revised">
+            <label>Find above site engineer of ORD in the list</label>
+
+            <select name="user_id" class="form-control">
+              @foreach($users as $user)
+                     <option value="{{$user->id}}" @if($project->user_id == $user->id) selected @endif>{{$user->name}}, C#: {{$user->profile->phone}}</option>
+              @endforeach
+              
+            </select>
+             
+            </div>
+
+
+
+
+            <div class="form-group-revised">
              <label>Zone</label>
              <select name="zone" required="true" class="form-control">
                <option disabled="true">Select Relevant Zone</option>

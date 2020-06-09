@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSuppliersTable extends Migration
+class CreateDiscussionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class CreateSuppliersTable extends Migration
      */
     public function up()
     {
-        Schema::create('suppliers', function (Blueprint $table) {
+        Schema::create('discussions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->integer('user_id')->unsigned();
+            $table->integer('project_id')->unsigned();
+            $table->integer('file_id')->unsigned();
+
+            $table->string('title');
+            $table->text('content');
             $table->timestamps();
         });
     }
@@ -27,6 +32,6 @@ class CreateSuppliersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('suppliers');
+        Schema::dropIfExists('discussions');
     }
 }

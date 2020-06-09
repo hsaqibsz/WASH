@@ -26,32 +26,32 @@
                                       <!-- Contacts Title -->
                                       <div class="block-title">
                                           <div class="block-options text-center">
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">A</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">B</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">C</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">D</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">E</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">F</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">G</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">H</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">I</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">J</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">K</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">L</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">M</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">N</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">O</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">P</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">Q</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">R</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">S</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">T</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">V</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">U</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">W</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">X</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">Y</a>
-                                              <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default">Z</a>
+                                              <a href="{{route('user.sort', 'a')}}" class="btn btn-sm btn-alt btn-default">A</a>
+                                              <a href="{{route('user.sort', 'b')}}" class="btn btn-sm btn-alt btn-default">B</a>
+                                              <a href="{{route('user.sort', 'c')}}" class="btn btn-sm btn-alt btn-default">C</a>
+                                              <a href="{{route('user.sort', 'd')}}" class="btn btn-sm btn-alt btn-default">D</a>
+                                              <a href="{{route('user.sort', 'e')}}" class="btn btn-sm btn-alt btn-default">E</a>
+                                              <a href="{{route('user.sort', 'f')}}" class="btn btn-sm btn-alt btn-default">F</a>
+                                              <a href="{{route('user.sort', 'g')}}" class="btn btn-sm btn-alt btn-default">G</a>
+                                              <a href="{{route('user.sort', 'h')}}" class="btn btn-sm btn-alt btn-default">H</a>
+                                              <a href="{{route('user.sort', 'i')}}" class="btn btn-sm btn-alt btn-default">I</a>
+                                              <a href="{{route('user.sort', 'j')}}" class="btn btn-sm btn-alt btn-default">J</a>
+                                              <a href="{{route('user.sort', 'k')}}" class="btn btn-sm btn-alt btn-default">K</a>
+                                              <a href="{{route('user.sort', 'l')}}" class="btn btn-sm btn-alt btn-default">L</a>
+                                              <a href="{{route('user.sort', 'm')}}" class="btn btn-sm btn-alt btn-default">M</a>
+                                              <a href="{{route('user.sort', 'n')}}" class="btn btn-sm btn-alt btn-default">N</a>
+                                              <a href="{{route('user.sort', 'o')}}" class="btn btn-sm btn-alt btn-default">O</a>
+                                              <a href="{{route('user.sort', 'p')}}" class="btn btn-sm btn-alt btn-default">P</a>
+                                              <a href="{{route('user.sort', 'q')}}" class="btn btn-sm btn-alt btn-default">Q</a>
+                                              <a href="{{route('user.sort', 'r')}}" class="btn btn-sm btn-alt btn-default">R</a>
+                                              <a href="{{route('user.sort', 's')}}" class="btn btn-sm btn-alt btn-default">S</a>
+                                              <a href="{{route('user.sort', 't')}}" class="btn btn-sm btn-alt btn-default">T</a>
+                                              <a href="{{route('user.sort', 'u')}}" class="btn btn-sm btn-alt btn-default">U</a>
+                                              <a href="{{route('user.sort', 'v')}}" class="btn btn-sm btn-alt btn-default">V</a>
+                                              <a href="{{route('user.sort', 'w')}}" class="btn btn-sm btn-alt btn-default">W</a>
+                                              <a href="{{route('user.sort', 'x')}}" class="btn btn-sm btn-alt btn-default">X</a>
+                                              <a href="{{route('user.sort', 'y')}}" class="btn btn-sm btn-alt btn-default">Y</a>
+                                              <a href="{{route('user.sort', 'z')}}" class="btn btn-sm btn-alt btn-default">Z</a>
                                           </div>
                                       </div>
                                       <!-- END Contacts Title -->
@@ -59,7 +59,13 @@
                                       <!-- Contacts Content -->
                                       <div class="row style-alt">
                                           <!-- Contact Widget -->
+@if($users->count()>0)
 
+<div class="alert alert-success alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <h4><i class="fa fa-check-circle"></i> Success</h4> <span>{{ $users->count()}} &nbsp; Users found</span>
+            </div>
+            
                                           @foreach($users as $user)
 
 
@@ -101,7 +107,16 @@
                                                                       </div>
                                         @endforeach
                                          
+
+@else
+    <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <h4><i class="fa fa-times-circle"></i> Error</h4> Oh no! <span>Record Found!</span>
+</div>
+
+@endif
                                       </div>
+                                         {{ $users->links() }}
                                       <!-- END Contacts Content -->
                                   </div>
                                   <!-- END Contacts Block -->
